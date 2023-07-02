@@ -58,19 +58,66 @@
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
+
+    .renders {
+      background-color: #333333;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .renders h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .renders p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .renders img {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+    /* Button Styles */
+    .scroll-button {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .scroll-button:hover {
+      background-color: #555;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Find's Portfolio</h1>
+    <div>
+      <button class="scroll-button" onclick="scrollToSection('showcases')">Showcases</button>
+      <button class="scroll-button" onclick="scrollToSection('renders')">Renders</button>
+      <button class="scroll-button" onclick="scrollToSection('pricing')">Pricing</button>
+    </div>
   </header>
-  
+
   <div class="container">
     <section id="about" class="fade-in">
       <h2>About Me</h2>
       <p>I am a professional programmer/scripter with over 7 years of experience. I love to make games and help people as best I can! I also made this website, so use this as proof of my skills!</p>
     </section>
-    
+
     <section id="showcases" class="fade-in">
       <h2>Showcases</h2>
       <div class="showcase-item">
@@ -86,9 +133,41 @@
         <p>Here you can check out all of the other creations I have on my Roblox profile. Not all of them are good, but if you need more proof, just ask me to make anything you could need and I will do so! <a href="https://www.roblox.com/users/1198999038/profile#!/creations">https://www.roblox.com/users/1198999038/profile#!/creations</a></p>
       </div>
     </section>
-    
+
+    <section id="renders" class="fade-in">
+      <h2>Renders</h2>
+      <div class="renders">
+        <h2>Boxing Ring Lower</h2>
+        <p>A boxing ring commission I did with a lower camera view</p>
+        <a href="https://ibb.co/HxX1y97"><img src="https://i.ibb.co/fnQBWTM/Box-Ring-Lower.png" alt="Box-Ring-Lower" border="0"></a>
+      </div>
+      <div class="renders">
+        <h2>Boxing Ring Higher</h2>
+        <p>A boxing ring commission I did with a higher camera view</p>
+        <a href="https://ibb.co/FnXyywq"><img src="https://i.ibb.co/rv3zz6f/Box-Ring-Upper.png" alt="Box-Ring-Upper" border="0"></a>
+      </div>
+      <div class="renders">
+        <h2>Simple Fence</h2>
+        <p>Just a little simple fence i did bc i was bored lol</p>
+        <a href="https://ibb.co/RhWjz0v"><img src="https://i.ibb.co/3fHRBNr/Needs-New-Colors-Fence.png" alt="Needs-New-Colors-Fence" border="0"></a>
+      </div>
+      <div class="renders">
+        <h2>Weird Stairs</h2>
+        <p>I do not even know what i was doing but yea... here it is.</p>
+        <a href="https://ibb.co/MSW4y2Q"><img src="https://i.ibb.co/KhRkc0S/Stair.png" alt="Stair" border="0"></a>
+      </div>
+      <div class="renders">
+        <h2>Forest Environment Render</h2>
+        <p>A simple forest environment I made in Blender (5 minutes)</p>
+        <a href="https://ibb.co/zVg6Kzh"><img src="https://i.ibb.co/VYGwXsW/Nice-Forest-Scene.png" alt="Nice-Forest-Scene" border="0"></a>
+      </div>
+      <div class="renders">
+      <h2>Nothing Else! i will be adding more as i go!</h2>
+      </div>
+    </section>
+
     <section id="pricing" class="fade-in">
-      <h2>Pricing</h2>
+      <h2>Pricing Scripting</h2>
       <div class="pricing-item">
         <h2>Short Term</h2>
         <p>For commissions for something small that's "short term," depending on what it is, I will charge in the range of [100 - 10,000] Robux.</p>
@@ -97,7 +176,23 @@
         <h2>Long Term</h2>
         <p>For full games or for a full-term scripting job, I will charge in the range of [1,000 - 50,000] Robux.</p>
       </div>
+      <h2>Pricing Modeling</h2>
+      <div class="pricing-item">
+        <h2>Assets</h2>
+        <p>For assets or 3D models depending on the amount, I'll charge in the range of [500 - 250,000] Robux, but most of the time for 1 asset, I do 100 - 1000 Robux.</p>
+      </div>
+      <div class="pricing-item">
+        <h2>Full Models</h2>
+        <p>For a fully modeled and fully created custom asset map, the price will be in the range of [2,500 - 2,500,000] Robux. I understand nobody is paying 2.5M for a map, but if you ask me to make you an entire interior, a massive detailed city with every building having an interior, then expect it to be that much. 🙂</p>
+      </div>
     </section>
   </div>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
